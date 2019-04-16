@@ -1,10 +1,9 @@
 extends Node2D
 
-
 var image = "";
 
-func _init(poke_image=""):
-    image = poke_image
+#func _init(poke_image=""):
+#    image = poke_image
 
 func _ready():
     # Create an HTTP request node and connect its completion signal
@@ -28,5 +27,4 @@ func _http_request_completed(result, response_code, headers, body):
     texture.create_from_image(image)
 
     # Assign to the child TextureRect nodedd
-    get_node("TextureRect").set_texture(texture)
-    #$TextureRect.set_texture(texture)
+    $TextureRect.set_texture(texture)

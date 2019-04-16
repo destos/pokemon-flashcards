@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 # Preload the class only once at compile time.
-const PokeImage = preload("PokeImage.gd")
+const PokeImage = preload("PokeImage.tscn")
 
 func _ready():
     pass
@@ -26,7 +26,8 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
                 break
 
         for pokemon in pokemons:
-            var image = PokeImage.new(pokemon["ThumbnailImage"])
+            var image = PokeImage.instance()
+            image.image = pokemon["ThumbnailImage"]
             add_child(image)
 
         # print(json.result[0]["ThumbnailImage"])
