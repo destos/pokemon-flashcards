@@ -21,12 +21,21 @@ _global_script_class_icons={
 [application]
 
 config/name="Pokemon Spelling"
-run/main_scene="res://CanvasLayer.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://interface/title_screen/TitleScreen.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="pokespell"
+config/icon="res://assets/icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/resizable=false
 
 [rendering]
 
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+environment/default_clear_color=Color( 0.984314, 0.984314, 0.984314, 1 )
 environment/default_environment="res://default_env.tres"
