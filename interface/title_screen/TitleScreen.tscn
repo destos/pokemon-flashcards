@@ -3,8 +3,8 @@
 [ext_resource path="res://interface/title_screen/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/logo.png" type="Texture" id=2]
 [ext_resource path="res://interface/title_screen/NewGameButton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://interface/title_screen/ContinueButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://interface/title_screen/OptionsButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://interface/title_screen/OptionsButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interface/title_screen/ContinueButton.tscn" type="PackedScene" id=5]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -38,22 +38,17 @@ custom_constants/separation = 20
 alignment = 1
 
 [node name="NewGameButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
-margin_top = 97.0
+margin_top = 137.0
 margin_right = 518.0
-margin_bottom = 157.0
-script = null
+margin_bottom = 197.0
+scene_to_load = "res://interface/options_screen/Options.tscn"
 
-[node name="ContinueButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 4 )]
-margin_top = 177.0
+[node name="OptionsButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 4 )]
+margin_top = 217.0
 margin_right = 518.0
-margin_bottom = 237.0
-script = null
-
-[node name="OptionsButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 5 )]
-margin_top = 257.0
-margin_right = 518.0
-margin_bottom = 317.0
-script = null
+margin_bottom = 277.0
+custom_colors/font_color_hover = Color( 0.698039, 0.603922, 0.0823529, 1 )
+scene_to_load = "res://interface/options_screen/Options.tscn"
 
 [node name="CenterContainer" type="CenterContainer" parent="Menu/CenterRow"]
 margin_left = 522.0
@@ -69,3 +64,11 @@ margin_right = 259.0
 margin_bottom = 207.0
 stretch_mode = 6
 
+[node name="Unused buttons" type="Node2D" parent="."]
+
+[node name="ContinueButton" parent="Unused buttons" instance=ExtResource( 5 )]
+visible = false
+margin_left = 120.0
+margin_top = 443.0
+margin_right = 638.0
+margin_bottom = 503.0

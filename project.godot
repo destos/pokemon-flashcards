@@ -32,6 +32,14 @@ window/size/width=1280
 window/size/height=720
 window/size/resizable=false
 
+[editor]
+
+active=false
+
+[editor_plugins]
+
+enabled=PoolStringArray( "open-external-editor" )
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
